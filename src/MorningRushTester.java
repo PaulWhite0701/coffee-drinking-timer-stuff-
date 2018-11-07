@@ -44,19 +44,17 @@ public class MorningRushTester
                 {
                     System.out.println("Go to school");
                     JOptionPane.showMessageDialog(null, "Make another?");
-                    gulps = initialGulps;
+                    gulps = initialGulps+1;
                 }
                 --gulps;
             }
         }
         
-        DrinkCoffee dc = new DrinkCoffee(5);
+        DrinkCoffee dc = new DrinkCoffee(initialGulps);
         Timer t = new Timer(DELAY, dc);
         t.start();
         JOptionPane.showMessageDialog(null, "Just about to go to school.");
-        
-        JOptionPane.showMessageDialog(null, "Make another?");
-        System.exit(0);
+                System.exit(0);
 
     }
 
